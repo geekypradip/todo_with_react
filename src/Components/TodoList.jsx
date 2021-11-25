@@ -3,7 +3,7 @@ function TodoList({title,id,status,handleToggle,handleDelete}) {
         <div>
             <h3>{title}</h3>
             <button onClick={()=>handleToggle(id)}>{status? "TRUE":"FALSE"}</button>
-            <button onClick={()=>handleDelete(id)}>Delete</button>
+            <button onClick={(e)=>e.target.parentNode.remove()}>Delete</button>
         </div>
      );
 }

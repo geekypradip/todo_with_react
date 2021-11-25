@@ -14,13 +14,10 @@ function Todo() {
         }
         setdata([...data,payLoad])
     }
-    const handleDelete=id=>{
-    //   const afterDeletdTodo=data.forEach((e,i)=>{
-    //       if(e.id===id){ data.splice(i,1)}
-         
-    //   })
-    //   setdata(afterDeletdTodo)
-    }
+    // const handleDelete=e=>{
+    // // let parent=e.target.parentNode;
+    // // parent.remove
+    // }
     const handleToggle=id=>{
         const updatedTodo=data.map((item)=>item.id===id?{...item,status:!item.status}:item)
         setdata(updatedTodo)
@@ -33,7 +30,7 @@ function Todo() {
            data.filter((item)=>(showAll?true:!item.status))
            .map(item=>
                 <TodoList 
-                handleDelete={handleDelete}
+                // handleDelete={handleDelete}
                 handleToggle={handleToggle}
                 key={item.id}{...item}
                 />
